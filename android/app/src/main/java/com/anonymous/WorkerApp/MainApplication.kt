@@ -1,4 +1,4 @@
-package com.workerapp
+package com.anonymous.WorkerApp
 
 import android.app.Application
 import android.content.res.Configuration

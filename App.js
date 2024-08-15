@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import MaterialTabs from "react-native-material-tabs";
+import WelcomeScreen from "./src/screens/WelcomeScreen";
+import CategoriesScreen from "./src/screens/CategoriesScreen";
+import Header from "./src/Components/Header";
+import styles from "./src/res/common/styles";
+import strings from "./src/res/common/string";
 
 export default function App() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <MaterialTabs
+        items={[strings.welcomeScreen.WELCOME, strings.welcomeScreen.CATEGORIES]}
+        uppercase={false}
+        scrollable={false}
+        barColor="white"
+        indicatorColor="black"
+        inactiveTextColor="#9E9EA8"
+        activeTextColor="black"
+        barHeight={35}
+        selectedIndex={selectedIndex}
+        onChange={(index) => setSelectedIndex(index)}
+      />
+
+      <View style={styles.screenContainer}>
+        {selectedIndex === 0 ? <WelcomeScreen /> : <CategoriesScreen />}
+      </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

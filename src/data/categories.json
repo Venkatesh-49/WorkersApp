@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Astrologer",
+    "icon": "https://cdn-icons-png.flaticon.com/512/564/564619.png", 
+    "imageLink": "stars.png"
+
+  },
+  {
+    "id": "2",
+    "name": "Photographer",
+    "imageLink": "photoGrapher.jpeg",
+
+    "icon": "https://cdn-icons-png.flaticon.com/512/564/564606.png" 
+  },
+  {
+    "id": "3",
+    "name": "Makeup",
+    "imageLink": "make-up.png",
+
+    "icon": "https://cdn-icons-png.flaticon.com/512/564/564606.png" 
+  },
+  {
+    "id": "4",
+    "name": "Mehendi",
+    "imageLink": "mehendi.png",
+
+    "icon": "https://cdn-icons-png.flaticon.com/512/564/564608.png" 
+  },
+  {
+    "id": "5",
+    "name": "Artist",
+    "imageLink": "shopping.png",
+
+    "icon": "https://cdn-icons-png.flaticon.com/512/564/564610.png" 
+  }
+]

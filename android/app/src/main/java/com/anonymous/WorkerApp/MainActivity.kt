@@ -1,4 +1,4 @@
-package com.workerapp
+package com.anonymous.WorkerApp
 
 import android.os.Build
 import android.os.Bundle
